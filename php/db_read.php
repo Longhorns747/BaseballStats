@@ -8,17 +8,15 @@
 $response = array();
  
 // include db connect class
-require_once __DIR__ . '/db_connect.php';
+require_once 'db_connect.php';
  
 // connecting to db
 $db = new DB_CONNECT();
 
-if (count($_GET) != 0) {
+if (count(array_values($_GET)) >= 0) {
  
     // Make a request to the appropriate table
-    $result = mysql_query("SELECT nameFirst, nameLast, (H / AB) AS AVG 
-            FROM (master NATURAL JOIN batting) 
-            WHERE (AVG >= .280) AND (yearID = 2012) AND (teamID = 'BOS') AND (AB > 50)");
+    $result = mysql_query("SELECT nameFirst, nameLast, (H / AB) AS AVG FROM (master NATURAL JOIN batting) WHERE ((H / AB) >= .280) AND (yearID = 2012) AND (teamID = 'BOS') AND (AB > 50);");
  
     if (!empty($result)) {
         // check for empty result
@@ -44,7 +42,7 @@ if (count($_GET) != 0) {
         } else {
             // no product found
             $response["success"] = 0;
-            $response["message"] = "Bad stats search";
+            $response["message"] = "Bad stats search A";
  
             // echo no users JSON
             echo json_encode($response);
@@ -52,7 +50,7 @@ if (count($_GET) != 0) {
     } else {
         // no product found
         $response["success"] = 0;
-        $response["message"] = "Bad stats search";
+        $response["message"] = "Bad stats search B";
  
         // echo no users JSON
         echo json_encode($response);

@@ -4,12 +4,18 @@
 
     <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
         <activity android:label="@string/app_name" android:name="com.shernan.baseballstats.DisplayActivity">
+        </activity>
+        <activity android:label="@string/title_activity_query" android:name="com.shernan.baseballstats.QueryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        android:debuggable="true"
     </application>
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

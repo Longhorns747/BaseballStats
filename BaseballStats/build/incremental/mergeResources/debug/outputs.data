@@ -2,11 +2,15 @@
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
 1375561569000 342 dfbb1598da6bd5268cc8f8e6f64dd94260ad2d2a /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/values-v11/values.xml
+1375570703000 1247 428a4497e2c5cc3ec80fb68b41d1c8a5a0432ef8 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/values/values.xml
+1375561569000 356 fc52b4d35f44f18ee121bd28f1bed86ec0c6c336 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/values-v14/values.xml
+1375570703000 1588 10389f8e92093f2ec068d3434921f9a585551873 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/layout/activity_query.xml
+1375561568000 373 b81ee67e88379b407d94c277f991a22d9a1c85dd /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/menu/display.xml
+1375570703000 4506 bc86e1b8368c9b5d572678a8638ed80629e749ba /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/drawable-hdpi/blankbg.jpg
 1375561569000 273 c6e2e8e9b5e6c4ce71d0b27dfd32bcf1b2c7ae2b /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/values-sw720dp-land/values.xml
-1375561569000 1196 c69c4ca64cbae5e37200a83b75819a65c794e050 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/values/values.xml
-1375561568000 792 56b72137c0c4be591d66df84b7154b30ffcdc3eb /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/layout/activity_display.xml
+1375570703000 685 417fdc34f83a044e6859d7dec7f3987c1db17f26 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/layout/activity_display.xml
 1375561570000 9193 450d3d44325fdf259810a60e6afa36103e186b3d /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/drawable-hdpi/ic_launcher.png
 1375561570000 14068 502cd84fa444f26d7ecfdf4a355064867977f236 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/drawable-xhdpi/ic_launcher.png
-1375561569000 356 fc52b4d35f44f18ee121bd28f1bed86ec0c6c336 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/values-v14/values.xml
 1375561570000 5057 23730fd0d5e720d1f719be1afc8c48fa7305da6c /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/drawable-mdpi/ic_launcher.png
-1375561568000 373 b81ee67e88379b407d94c277f991a22d9a1c85dd /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/menu/display.xml
+1375570524000 371 b51604af5c9b1efb8c887ec1aed2c9eff1e31941 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/menu/query.xml
+1375570524000 19344 723aff25a52a7f54867dba84bb55e5bfa2b39ed0 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/all/debug/drawable-hdpi/background.jpg

@@ -16,16 +16,17 @@
         <activity
             android:name="com.shernan.baseballstats.DisplayActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.shernan.baseballstats.QueryActivity"
+            android:label="@string/title_activity_query" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.shernan.baseballstats.QueryActivity"
-            android:label="@string/title_activity_query" >
-        </activity>
+        android:debuggable="true"
     </application>
 
     <!-- Internet Permissions -->

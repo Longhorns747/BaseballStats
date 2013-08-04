@@ -10,15 +10,24 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="79247a5e-bf9a-429c-8650-13c0c82e2ab7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/QueryActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_query.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BaseballStats/src/main/res/menu/query.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BaseballStats/src/main/res/drawable-hdpi/blankBG.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/com/shernan/baseballstats/utils/JSONParser.java" afterPath="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/utils/JSONParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/BaseballStats/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/DisplayActivity.java" afterPath="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/DisplayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/QueryActivity.java" afterPath="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/QueryActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/build/source/r/debug/com/shernan/baseballstats/R.java" afterPath="$PROJECT_DIR$/BaseballStats/build/source/r/debug/com/shernan/baseballstats/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/build/res/all/debug/layout/activity_display.xml" afterPath="$PROJECT_DIR$/BaseballStats/build/res/all/debug/layout/activity_display.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_display.xml" afterPath="$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_display.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_query.xml" afterPath="$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_query.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/db_connect.php" afterPath="$PROJECT_DIR$/php/db_connect.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/db_read.php" afterPath="$PROJECT_DIR$/php/db_read.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/BaseballStats/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseballStats/build/res/all/debug/values/values.xml" afterPath="$PROJECT_DIR$/BaseballStats/build/res/all/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BaseballStats.iws" />
@@ -84,32 +93,48 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="JSONParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/com/shernan/baseballstats/utils/JSONParser.java">
+        <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/utils/JSONParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0" vertical-offset="524" max-vertical-offset="1080">
+            <state line="73" column="0" selection-start="2411" selection-end="2411" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="1080">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DisplayActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/DisplayActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <folding />
+            <state line="168" column="42" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.675" vertical-offset="1935" max-vertical-offset="2430">
+              <folding>
+                <element signature="e#2524#2539#0" expanded="true" />
+                <element signature="e#3550#3566#0" expanded="true" />
+                <element signature="e#4333#5975#0" expanded="true" />
+                <element signature="e#5960#5961#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_display.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="activity_display.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_display.xml">
-          <provider editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="17" selection-start="544" selection-end="544" vertical-scroll-proportion="-5.6896553" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
+          <provider editor-type-id="android-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/QueryActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="35" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -163,11 +188,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/com/shernan/baseballstats/utils/JSONParser.java" />
-        <option value="$PROJECT_DIR$/BaseballStats/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_query.xml" />
         <option value="$PROJECT_DIR$/BaseballStats/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/QueryActivity.java" />
-        <option value="$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_query.xml" />
+        <option value="$PROJECT_DIR$/BaseballStats/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_display.xml" />
+        <option value="$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/DisplayActivity.java" />
       </list>
     </option>
   </component>
@@ -175,6 +201,28 @@
     <option name="y" value="27" />
     <option name="width" value="1366" />
     <option name="height" value="741" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Error handling</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -304,6 +352,96 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStatsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStatsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStatsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseballStats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -357,11 +495,14 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="308" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="EthanAndroid" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="00448ae8cc0d1356" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -464,7 +605,7 @@
     </configuration>
     <configuration default="false" name="BaseballStats" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="BaseballStats" />
-      <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_CLASS" value="com.shernan.baseballstats.QueryActivity" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
@@ -476,6 +617,8 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
     <list size="1">
@@ -511,6 +654,7 @@
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
     <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">$USER_HOME$/.subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
@@ -522,34 +666,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="7" />
-    <editor active="false" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27659574" sideWeight="0.6006826" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2662116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1588146" sideWeight="0.67064846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25987843" sideWeight="0.7337884" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -613,44 +757,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="66" selection-start="958" selection-end="958" vertical-scroll-proportion="0.7284173" vertical-offset="0" max-vertical-offset="556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/com/shernan/baseballstats/utils/JSONParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0" vertical-offset="524" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="52" selection-start="156" selection-end="156" vertical-scroll-proportion="0.107913665" vertical-offset="0" max-vertical-offset="556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/DisplayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/QueryActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+        <state line="6" column="30" selection-start="250" selection-end="250" vertical-scroll-proportion="0.16187051" vertical-offset="0" max-vertical-offset="556">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_query.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.800759" vertical-offset="43" max-vertical-offset="570">
+        <state line="24" column="35" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.573055" vertical-offset="58" max-vertical-offset="585">
           <folding />
         </state>
       </provider>
@@ -658,14 +774,60 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="46" selection-start="612" selection-end="612" vertical-scroll-proportion="0.4586331" vertical-offset="0" max-vertical-offset="615">
+          <folding>
+            <element signature="e#418#436#0" expanded="false" />
+            <element signature="e#592#610#0" expanded="false" />
+            <element signature="e#744#774#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/res/layout/activity_display.xml">
-      <provider editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="544" selection-end="544" vertical-scroll-proportion="-5.6896553" vertical-offset="0" max-vertical-offset="270">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/QueryActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="35" selection-start="659" selection-end="659" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/java/lang/ClassLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="30" selection-start="2418" selection-end="2418" vertical-scroll-proportion="0.0" vertical-offset="557" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/utils/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="0" selection-start="2411" selection-end="2411" vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BaseballStats/src/main/java/com/shernan/baseballstats/DisplayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="42" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.675" vertical-offset="1935" max-vertical-offset="2430">
+          <folding>
+            <element signature="e#2524#2539#0" expanded="true" />
+            <element signature="e#3550#3566#0" expanded="true" />
+            <element signature="e#4333#5975#0" expanded="true" />
+            <element signature="e#5960#5961#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
