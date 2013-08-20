@@ -24,20 +24,17 @@ if (count(array_values($_GET)) > 0) {
     if (!empty($result)) {
         // check for empty result
         if (mysql_num_rows($result) > 0) {
- 
-            $result = mysql_fetch_array($result);
- 
-            $stats = array();
-            $stats["yearID"] = $result["yearID"];
-            $stats["AVG"] = $result["AVG"];
+            $response["stats"] = array();
+
+            while ($row = mysql_fetch_array($result)) {
+                $year = array();
+                $year["yearID"] = $row["yearID"];
+                $year["AVG"] = $row["AVG"];
+                array_push($response["stats"], $year);
+            }
 
             // success
             $response["success"] = 1;
- 
-            // user node
-            $response["stats"] = array();
- 
-            array_push($response["stats"], $stats);
  
             // echoing JSON response
             echo json_encode($response);
