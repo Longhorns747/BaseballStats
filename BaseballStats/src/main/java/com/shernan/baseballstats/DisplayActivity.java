@@ -6,7 +6,9 @@ import java.util.List;
 
 import com.shernan.baseballstats.utils.*;
 
+import org.apache.http.HeaderElement;
 import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,6 +16,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.drawable.DrawableContainer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,8 +41,12 @@ public class DisplayActivity extends Activity {
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_STATS = "stats";
-    private static final String TAG_FNAME = "nameFirst";
-    private static final String TAG_LNAME = "nameLast";
+    private static final String TAG_YEAR = "yearID";
+    private static final String TAG_AVG = "AVG";
+
+    //Player name from the input screen
+    String inputFName;
+    String inputLName;
 
     // stats JSONArray
     JSONArray stats = null;
@@ -48,6 +55,11 @@ public class DisplayActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
+
+        //Getting the name of the player from query screen
+        Intent queryIntent = getIntent();
+        inputFName = queryIntent.getStringExtra(QueryActivity.PLAYER_FIRST_NAME);
+        inputLName = queryIntent.getStringExtra(QueryActivity.PLAYER_LAST_NAME);
 
         statsList = new ArrayList<HashMap<String, String>>();
 
@@ -63,7 +75,7 @@ public class DisplayActivity extends Activity {
     }
 
     /**
-     * Background Async Task to Load all product by making HTTP Request
+     * Background Async Task to Load all stats by making HTTP Request
      * */
     class LoadStats extends AsyncTask<String, String, String> {
 
@@ -84,13 +96,17 @@ public class DisplayActivity extends Activity {
          * getting stats
          * */
         protected String doInBackground(String... args) {
+
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("firstName", inputFName));
+            params.add(new BasicNameValuePair("lastName", inputLName));
+
             // getting JSON string from URL
             JSONObject json = jParser.makeHttpRequest(read_db_url, "GET", params);
 
             // Check your log cat for JSON reponse
-            Log.d("All Stats: ", json.toString());
+            //Log.d("All Stats: ", json.toString());
 
             try {
                 // Checking for SUCCESS TAG
@@ -106,15 +122,15 @@ public class DisplayActivity extends Activity {
                         JSONObject c = stats.getJSONObject(i);
 
                         // Storing each json item in variable
-                        String firstName = c.getString(TAG_FNAME);
-                        String lastName = c.getString(TAG_LNAME);
+                        String year = c.getString(TAG_YEAR);
+                        String avg = c.getString(TAG_AVG);
 
                         // creating new HashMap
                         HashMap<String, String> map = new HashMap<String, String>();
 
                         // adding each child node to HashMap
-                        map.put(TAG_FNAME, firstName);
-                        map.put(TAG_LNAME, lastName);
+                        map.put(TAG_YEAR, year);
+                        map.put(TAG_AVG, avg);
 
                         // adding HashList to ArrayList
                         statsList.add(map);
@@ -137,33 +153,42 @@ public class DisplayActivity extends Activity {
             runOnUiThread(new Runnable() {
                 public void run() {
                     /**
-                     * Updating parsed JSON data into ListView
+                     * Put JSON data into table format
                      * */
                     TableLayout table = new TableLayout(DisplayActivity.this);
+                    table.setBackgroundResource(getResources().getIdentifier("blankbg" , "drawable", getPackageName()));
+
+                    //Set up name header
+                    TableRow tableHeader = new TableRow(DisplayActivity.this);
+                    tableHeader.setGravity(Gravity.CENTER);
+                    TextView fName = new TextView(DisplayActivity.this);
+                    fName.setText(inputFName);
+                    TextView lName = new TextView(DisplayActivity.this);
+                    lName.setText(inputLName);
 
                     //Set up table header
-                    TableRow titleRow = new TableRow(DisplayActivity.this);
-                    titleRow.setGravity(Gravity.CENTER);
-                    TextView fName = new TextView(DisplayActivity.this);
-                    fName.setText("First Name");
-                    TextView lName = new TextView(DisplayActivity.this);
-                    lName.setText("Last Name");
-                    titleRow.addView(fName);
-                    titleRow.addView(lName);
-                    table.addView(titleRow);
+                    TableRow statsHeader = new TableRow(DisplayActivity.this);
+                    statsHeader.setGravity(Gravity.CENTER);
+                    TextView yearHeader = new TextView(DisplayActivity.this);
+                    yearHeader.setText("Year");
+                    TextView AVGHeader = new TextView(DisplayActivity.this);
+                    AVGHeader.setText("AVG");
+                    statsHeader.addView(yearHeader);
+                    statsHeader.addView(AVGHeader);
+                    table.addView(statsHeader);
 
                     //Get data from JSON response and put into table
-                    for(HashMap<String, String> player: statsList){
-                        TableRow playerRow = new TableRow(DisplayActivity.this);
-                        playerRow.setGravity(Gravity.CENTER);
+                    for(HashMap<String, String> yearResult: statsList){
+                        TableRow statsRow = new TableRow(DisplayActivity.this);
+                        statsRow.setGravity(Gravity.CENTER);
 
-                        TextView playerFName = new TextView(DisplayActivity.this);
-                        playerFName.setText(player.get(TAG_FNAME));
-                        TextView playerLName = new TextView(DisplayActivity.this);
-                        playerLName.setText(player.get(TAG_LNAME));
-                        playerRow.addView(playerFName);
-                        playerRow.addView(playerLName);
-                        table.addView(playerRow);
+                        TextView year = new TextView(DisplayActivity.this);
+                        year.setText(yearResult.get(TAG_YEAR));
+                        TextView battingAvg = new TextView(DisplayActivity.this);
+                        battingAvg.setText(yearResult.get(TAG_AVG));
+                        statsRow.addView(year);
+                        statsRow.addView(battingAvg);
+                        table.addView(statsRow);
                     }
 
                     setContentView(table);

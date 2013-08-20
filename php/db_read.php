@@ -13,10 +13,13 @@ require_once 'db_connect.php';
 // connecting to db
 $db = new DB_CONNECT();
 
-if (count(array_values($_GET)) >= 0) {
+if (count(array_values($_GET)) > 0) {
+    $firstName = $_GET["firstName"];
+    $lastName = $_GET["lastName"];
  
     // Make a request to the appropriate table
-    $result = mysql_query("SELECT nameFirst, nameLast, (H / AB) AS AVG FROM (master NATURAL JOIN batting) WHERE ((H / AB) >= .280) AND (yearID = 2012) AND (teamID = 'BOS') AND (AB > 50);");
+    $result = mysql_query("SELECT yearID, (H / AB) AS AVG FROM (master NATURAL JOIN batting)
+        WHERE nameFirst = '$firstName' AND nameLast = '$lastName' LIMIT 10;");
  
     if (!empty($result)) {
         // check for empty result
@@ -25,8 +28,7 @@ if (count(array_values($_GET)) >= 0) {
             $result = mysql_fetch_array($result);
  
             $stats = array();
-            $stats["nameFirst"] = $result["nameFirst"];
-            $stats["nameLast"] = $result["nameLast"];
+            $stats["yearID"] = $result["yearID"];
             $stats["AVG"] = $result["AVG"];
 
             // success
