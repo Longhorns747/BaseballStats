@@ -1,7 +1,8 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
@@ -14,32 +15,33 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/app_name"
+            android:layout_gravity="center"
             android:id="@+id/textView"
             android:layout_marginTop="10dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"/>
 
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/query"
-            android:id="@+id/query_button"
-            android:onClick="startQuery"
-            android:layout_marginTop="14dp"
-            android:layout_below="@+id/query"
-            android:layout_centerHorizontal="true"/>
-
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:id="@+id/query"
-            android:layout_marginTop="12dp"
             android:inputType="text"
             android:hint="Player Name"
             android:layout_below="@+id/textView"
-            android:layout_alignLeft="@+id/textView"
-            android:layout_alignRight="@+id/textView"/>
+            android:layout_centerHorizontal="true"
+            android:width="200dp"/>
 
-</RelativeLayout>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/query"
+            android:id="@+id/query_button"
+            android:onClick="startQuery"
+            android:layout_below="@+id/query"
+            android:layout_centerHorizontal="true"/>
+
+</LinearLayout>
 
 <!-- From: file:/home/ethan/Dropbox/My%20Stuff/Android%20Dev/BaseballStatsProject/BaseballStats/src/main/res/layout/activity_query.xml -->

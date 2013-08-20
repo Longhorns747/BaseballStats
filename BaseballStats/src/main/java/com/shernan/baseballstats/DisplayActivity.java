@@ -16,6 +16,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.DrawableContainer;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -162,17 +163,30 @@ public class DisplayActivity extends Activity {
                     TableRow tableHeader = new TableRow(DisplayActivity.this);
                     tableHeader.setGravity(Gravity.CENTER);
                     TextView fName = new TextView(DisplayActivity.this);
+                    fName.setGravity(Gravity.CENTER);
+                    fName.setPadding(0, 0, 10, 0);
                     fName.setText(inputFName);
+                    fName.setTextSize(20);
+                    fName.setTextColor(Color.BLACK);
                     TextView lName = new TextView(DisplayActivity.this);
+                    lName.setGravity(Gravity.CENTER);
                     lName.setText(inputLName);
+                    lName.setTextSize(20);
+                    lName.setTextColor(Color.BLACK);
+                    table.addView(tableHeader);
 
                     //Set up table header
                     TableRow statsHeader = new TableRow(DisplayActivity.this);
                     statsHeader.setGravity(Gravity.CENTER);
                     TextView yearHeader = new TextView(DisplayActivity.this);
                     yearHeader.setText("Year");
+                    yearHeader.setPadding(0, 0, 10, 0);
+                    yearHeader.setTextSize(20);
+                    yearHeader.setTextColor(Color.BLACK);
                     TextView AVGHeader = new TextView(DisplayActivity.this);
                     AVGHeader.setText("AVG");
+                    AVGHeader.setTextSize(20);
+                    AVGHeader.setTextColor(Color.BLACK);
                     statsHeader.addView(yearHeader);
                     statsHeader.addView(AVGHeader);
                     table.addView(statsHeader);
@@ -181,11 +195,17 @@ public class DisplayActivity extends Activity {
                     for(HashMap<String, String> yearResult: statsList){
                         TableRow statsRow = new TableRow(DisplayActivity.this);
                         statsRow.setGravity(Gravity.CENTER);
+                        statsRow.setDividerPadding(10);
 
                         TextView year = new TextView(DisplayActivity.this);
                         year.setText(yearResult.get(TAG_YEAR));
+                        year.setPadding(0, 0, 10, 0);
+                        year.setTextSize(20);
+                        year.setTextColor(Color.BLACK);
                         TextView battingAvg = new TextView(DisplayActivity.this);
                         battingAvg.setText(yearResult.get(TAG_AVG));
+                        battingAvg.setTextSize(20);
+                        battingAvg.setTextColor(Color.BLACK);
                         statsRow.addView(year);
                         statsRow.addView(battingAvg);
                         table.addView(statsRow);

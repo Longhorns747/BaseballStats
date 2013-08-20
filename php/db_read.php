@@ -18,8 +18,8 @@ if (count(array_values($_GET)) > 0) {
     $lastName = $_GET["lastName"];
  
     // Make a request to the appropriate table
-    $result = mysql_query("SELECT yearID, (H / AB) AS AVG FROM (master NATURAL JOIN batting)
-        WHERE nameFirst = '$firstName' AND nameLast = '$lastName' LIMIT 10;");
+    $result = mysql_query("SELECT yearID, ROUND((H / AB), 3) AS AVG FROM (master NATURAL JOIN batting)
+        WHERE nameFirst = '$firstName' AND nameLast = '$lastName' ORDER BY yearID DESC LIMIT 15;");
  
     if (!empty($result)) {
         // check for empty result
