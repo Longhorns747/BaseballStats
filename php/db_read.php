@@ -18,7 +18,7 @@ if (count(array_values($_GET)) > 0) {
     $lastName = $_GET["lastName"];
  
     // Make a request to the appropriate table
-    $result = mysql_query("SELECT yearID, H, 2B, 3B, HR, AB, BB, IBB, HBP, SF, ROUND((H / AB), 3) AS AVG FROM (master NATURAL JOIN batting)
+    $result = mysql_query("SELECT yearID, teamID, H, 2B, 3B, HR, AB, BB, IBB, HBP, SF, ROUND((H / AB), 3) AS AVG FROM (master NATURAL JOIN batting)
         WHERE nameFirst = '$firstName' AND nameLast = '$lastName' ORDER BY yearID DESC LIMIT 15;");
  
     if (!empty($result)) {
@@ -29,6 +29,12 @@ if (count(array_values($_GET)) > 0) {
             while ($row = mysql_fetch_array($result)) {
                 $year = array();
                 $year["yearID"] = $row["yearID"];
+
+                $teamID = $row["teamID"];
+                $teamIDArray = mysql_fetch_array(mysql_query("SELECT teamIDBR FROM teams WHERE teamID = '$teamID' GROUP BY teamIDBR;"));
+
+                $year["teamID"] = $teamIDArray["teamIDBR"];
+
                 $year["AVG"] = ltrim(number_format($row["AVG"], 3), '0');
 
                 //Calculate on base percentage
