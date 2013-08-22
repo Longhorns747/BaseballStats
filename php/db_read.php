@@ -32,13 +32,17 @@ if (count(array_values($_GET)) > 0) {
                 $year["AVG"] = ltrim(number_format($row["AVG"], 3), '0');
 
                 //Calculate on base percentage
-                $OBP = ($row["H"] + $row["BB"] + $row["IBB"] + $row["HBP"]) /
-                        ($row["BB"] + $row["IBB"] + $row["HBP"] + $row["AB"] + $row["SF"]);
+                $SINGLES = $row["H"] - ($row["2B"] + $row["3B"] + $row["HR"]);
+
+                $OBP = ($row["H"] + $row["BB"] + $row["HBP"]) /
+                        ($row["BB"] + $row["HBP"] + $row["AB"] + $row["SF"]);
                 $year["OBP"] = ltrim(number_format(round($OBP, 3), 3), '0');
 
                 //Calculate slugging percentage
-                $SLG = ($row["H"] + (2 * $row["2B"]) + (3 * $row["3B"]) + (4 * $row["HR"])) / $row["AB"];
+                $SLG = ($SINGLES + (2 * $row["2B"]) + (3 * $row["3B"]) + (4 * $row["HR"])) / $row["AB"];
                 $year["SLG"] = ltrim(number_format(round($SLG, 3), 3), '0');
+
+                $year["OPS"] = number_format(round($OBP + $SLG, 3), 3);
 
                 array_push($response["stats"], $year);
             }
