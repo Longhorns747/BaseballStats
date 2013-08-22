@@ -18,7 +18,7 @@ if (count(array_values($_GET)) > 0) {
     $lastName = $_GET["lastName"];
  
     // Make a request to the appropriate table
-    $result = mysql_query("SELECT yearID, H, 2B, 3B, HR, AB, ROUND((H / AB), 3) AS AVG FROM (master NATURAL JOIN batting)
+    $result = mysql_query("SELECT yearID, H, 2B, 3B, HR, AB, BB, IBB, HBP, SF, ROUND((H / AB), 3) AS AVG FROM (master NATURAL JOIN batting)
         WHERE nameFirst = '$firstName' AND nameLast = '$lastName' ORDER BY yearID DESC LIMIT 15;");
  
     if (!empty($result)) {
@@ -30,6 +30,11 @@ if (count(array_values($_GET)) > 0) {
                 $year = array();
                 $year["yearID"] = $row["yearID"];
                 $year["AVG"] = ltrim(number_format($row["AVG"], 3), '0');
+
+                //Calculate on base percentage
+                $OBP = ($row["H"] + $row["BB"] + $row["IBB"] + $row["HBP"]) /
+                        ($row["BB"] + $row["IBB"] + $row["HBP"] + $row["AB"] + $row["SF"]);
+                $year["OBP"] = ltrim(number_format(round($OBP, 3), 3), '0');
 
                 //Calculate slugging percentage
                 $SLG = ($row["H"] + (2 * $row["2B"]) + (3 * $row["3B"]) + (4 * $row["HR"])) / $row["AB"];

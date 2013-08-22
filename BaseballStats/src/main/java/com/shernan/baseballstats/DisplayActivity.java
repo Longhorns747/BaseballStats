@@ -42,11 +42,12 @@ public class DisplayActivity extends Activity {
     private static final String TAG_STATS = "stats";
     private static final String TAG_YEAR = "yearID";
     private static final String TAG_AVG = "AVG";
+    private static final String TAG_OBP = "OBP";
     private static final String TAG_SLG = "SLG";
 
     //Column information arrays
-    private static final String[] COLUMN_TAGS = {TAG_YEAR, TAG_AVG, TAG_SLG};
-    private static final String[] COLUMN_NAMES = {"Year", "AVG", "SLG"};
+    private static final String[] COLUMN_TAGS = {TAG_YEAR, TAG_AVG, TAG_OBP, TAG_SLG};
+    private static final String[] COLUMN_NAMES = {"Year", "AVG", "OBP", "SLG"};
 
     //Player name from the input screen
     String inputFName;
