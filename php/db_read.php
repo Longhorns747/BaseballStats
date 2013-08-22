@@ -29,11 +29,11 @@ if (count(array_values($_GET)) > 0) {
             while ($row = mysql_fetch_array($result)) {
                 $year = array();
                 $year["yearID"] = $row["yearID"];
-                $year["AVG"] = number_format($row["AVG"], 3);
+                $year["AVG"] = ltrim(number_format($row["AVG"], 3), '0');
 
                 //Calculate slugging percentage
                 $SLG = ($row["H"] + (2 * $row["2B"]) + (3 * $row["3B"]) + (4 * $row["HR"])) / $row["AB"];
-                $year["SLG"]  = number_format(round($SLG, 3), 3);
+                $year["SLG"] = ltrim(number_format(round($SLG, 3), 3), '0');
 
                 array_push($response["stats"], $year);
             }
