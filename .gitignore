@@ -23,3 +23,7 @@ local.properties
 php/db_config.php
 BaseballStats.pem
 DBInfo.txt
+
+#Gradle stuff
+.gradle
+.idea
