@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.shernan.baseballstats.utils.*;
 
-import org.apache.http.HeaderElement;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
@@ -17,7 +16,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.DrawableContainer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,6 +42,11 @@ public class DisplayActivity extends Activity {
     private static final String TAG_STATS = "stats";
     private static final String TAG_YEAR = "yearID";
     private static final String TAG_AVG = "AVG";
+    private static final String TAG_SLG = "SLG";
+
+    //Column information arrays
+    private static final String[] COLUMN_TAGS = {TAG_YEAR, TAG_AVG, TAG_SLG};
+    private static final String[] COLUMN_NAMES = {"Year", "AVG", "SLG"};
 
     //Player name from the input screen
     String inputFName;
@@ -107,7 +110,7 @@ public class DisplayActivity extends Activity {
             JSONObject json = jParser.makeHttpRequest(read_db_url, "GET", params);
 
             // Check your log cat for JSON reponse
-            //Log.d("All Stats: ", json.toString());
+            Log.d("All Stats: ", json.toString());
 
             try {
                 // Checking for SUCCESS TAG
@@ -120,21 +123,16 @@ public class DisplayActivity extends Activity {
 
                     // looping through stats
                     for (int i = 0; i < stats.length(); i++) {
-                        JSONObject c = stats.getJSONObject(i);
+                        JSONObject jsonStats = stats.getJSONObject(i);
+                        HashMap<String, String> mapStats = new HashMap<String, String>();
 
                         // Storing each json item in variable
-                        String year = c.getString(TAG_YEAR);
-                        String avg = c.getString(TAG_AVG);
-
-                        // creating new HashMap
-                        HashMap<String, String> map = new HashMap<String, String>();
-
-                        // adding each child node to HashMap
-                        map.put(TAG_YEAR, year);
-                        map.put(TAG_AVG, avg);
+                        for(String tag: COLUMN_TAGS){
+                            mapStats.put(tag, jsonStats.getString(tag));
+                        }
 
                         // adding HashList to ArrayList
-                        statsList.add(map);
+                        statsList.add(mapStats);
                     }
                 }
             } catch (JSONException e) {
@@ -162,52 +160,46 @@ public class DisplayActivity extends Activity {
                     //Set up name header
                     TableRow tableHeader = new TableRow(DisplayActivity.this);
                     tableHeader.setGravity(Gravity.CENTER);
-                    TextView fName = new TextView(DisplayActivity.this);
-                    fName.setGravity(Gravity.CENTER);
+
+                    TextView fName = createColumn(inputFName, 20, Color.BLACK);
                     fName.setPadding(0, 0, 10, 0);
-                    fName.setText(inputFName);
-                    fName.setTextSize(20);
-                    fName.setTextColor(Color.BLACK);
-                    TextView lName = new TextView(DisplayActivity.this);
-                    lName.setGravity(Gravity.CENTER);
-                    lName.setText(inputLName);
-                    lName.setTextSize(20);
-                    lName.setTextColor(Color.BLACK);
+
+                    TextView lName = createColumn(inputLName, 20, Color.BLACK);
+                    tableHeader.addView(fName);
+                    tableHeader.addView(lName);
+
                     table.addView(tableHeader);
 
                     //Set up table header
                     TableRow statsHeader = new TableRow(DisplayActivity.this);
                     statsHeader.setGravity(Gravity.CENTER);
-                    TextView yearHeader = new TextView(DisplayActivity.this);
-                    yearHeader.setText("Year");
-                    yearHeader.setPadding(0, 0, 10, 0);
-                    yearHeader.setTextSize(20);
-                    yearHeader.setTextColor(Color.BLACK);
-                    TextView AVGHeader = new TextView(DisplayActivity.this);
-                    AVGHeader.setText("AVG");
-                    AVGHeader.setTextSize(20);
-                    AVGHeader.setTextColor(Color.BLACK);
-                    statsHeader.addView(yearHeader);
-                    statsHeader.addView(AVGHeader);
+
+                    for(int i = 0; i < COLUMN_NAMES.length; i++){
+                        TextView header = createColumn(COLUMN_NAMES[i], 20, Color.BLACK);
+                        header.setGravity(Gravity.CENTER);
+
+                        if(i != COLUMN_NAMES.length - 1)
+                            header.setPadding(0, 0, 10, 0);
+
+                        statsHeader.addView(header);
+                    }
+
                     table.addView(statsHeader);
 
                     //Get data from JSON response and put into table
                     for(HashMap<String, String> yearResult: statsList){
                         TableRow statsRow = new TableRow(DisplayActivity.this);
                         statsRow.setGravity(Gravity.CENTER);
-                        statsRow.setDividerPadding(10);
 
-                        TextView year = new TextView(DisplayActivity.this);
-                        year.setText(yearResult.get(TAG_YEAR));
-                        year.setPadding(0, 0, 10, 0);
-                        year.setTextSize(20);
-                        year.setTextColor(Color.BLACK);
-                        TextView battingAvg = new TextView(DisplayActivity.this);
-                        battingAvg.setText(yearResult.get(TAG_AVG));
-                        battingAvg.setTextSize(20);
-                        battingAvg.setTextColor(Color.BLACK);
-                        statsRow.addView(year);
-                        statsRow.addView(battingAvg);
+                        for(int i = 0; i < COLUMN_TAGS.length; i++){
+                            TextView stat = createColumn(yearResult.get(COLUMN_TAGS[i]), 20, Color.BLACK);
+
+                            if(i != COLUMN_TAGS.length - 1)
+                                stat.setPadding(0, 0, 10, 0);
+
+                            statsRow.addView(stat);
+                        }
+
                         table.addView(statsRow);
                     }
 
@@ -217,6 +209,14 @@ public class DisplayActivity extends Activity {
 
         }
 
+    }
+
+    public TextView createColumn(String text, int size, int color){
+        TextView view = new TextView(DisplayActivity.this);
+        view.setText(text);
+        view.setTextSize(size);
+        view.setTextColor(color);
+        return view;
     }
     
 }

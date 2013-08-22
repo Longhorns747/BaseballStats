@@ -36,7 +36,6 @@ public class JSONParser {
         try {
             // Needs to be a GET request
             if(method == "GET"){
-                // request method is GET
                 DefaultHttpClient httpClient = new DefaultHttpClient();
                 String paramString = URLEncodedUtils.format(params, "utf-8");
                 url += "?" + paramString;
