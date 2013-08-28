@@ -33,7 +33,7 @@ if (count(array_values($_GET)) > 0) {
                 $teamID = $row["teamID"];
                 $teamIDArray = mysql_fetch_array(mysql_query("SELECT teamIDBR FROM teams WHERE teamID = '$teamID' GROUP BY teamIDBR;"));
 
-                $year["teamID"] = $teamIDArray["teamIDBR"];
+                $year["teamID"] = trim($teamIDArray["teamIDBR"]);
 
                 $year["AVG"] = ltrim(number_format($row["AVG"], 3), '0');
 
