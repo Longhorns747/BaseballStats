@@ -47,9 +47,13 @@ public class DisplayActivity extends Activity {
     private static final String TAG_SLG = "SLG";
     private static final String TAG_OPS = "OPS";
 
-    //Column information arrays
-    private static final String[] COLUMN_TAGS = {TAG_YEAR, TAG_TEAM, TAG_AVG, TAG_OBP, TAG_SLG, TAG_OPS};
-    private static final String[] COLUMN_NAMES = {"Year", "Team", "AVG", "OBP", "SLG", "OPS"};
+    //Column information arrays shared between Batting/Pitching
+    private static final String[] COLUMN_TAGS = {TAG_YEAR, TAG_TEAM};
+    private static final String[] COLUMN_NAMES = {"Year", "Team"};
+
+    //Batting specific tags
+    private static final String[] BATTING_TAGS = {TAG_AVG, TAG_OBP, TAG_SLG, TAG_OPS};
+    private static final String[] BATTING_NAMES = {"AVG", "OBP", "SLG", "OPS"};
 
     //Player name from the input screen
     String inputFName;
@@ -130,7 +134,7 @@ public class DisplayActivity extends Activity {
                         HashMap<String, String> mapStats = new HashMap<String, String>();
 
                         // Storing each json item in variable
-                        for(String tag: COLUMN_TAGS){
+                        for(String tag: BATTING_TAGS){
                             mapStats.put(tag, jsonStats.getString(tag));
                         }
 
@@ -158,53 +162,11 @@ public class DisplayActivity extends Activity {
                      * Put JSON data into table format
                      * */
                     TableLayout table = new TableLayout(DisplayActivity.this);
-                    table.setBackgroundResource(getResources().getIdentifier("blankbg" , "drawable", getPackageName()));
+                    table.setBackgroundResource(getResources().getIdentifier("blank" , "drawable", getPackageName()));
 
-                    //Set up name header
-                    TableRow tableHeader = new TableRow(DisplayActivity.this);
-                    tableHeader.setGravity(Gravity.CENTER);
-
-                    TextView fName = createColumn(inputFName, 20, Color.BLACK);
-                    fName.setPadding(0, 0, 10, 0);
-
-                    TextView lName = createColumn(inputLName, 20, Color.BLACK);
-                    tableHeader.addView(fName);
-                    tableHeader.addView(lName);
-
-                    table.addView(tableHeader);
-
-                    //Set up table header
-                    TableRow statsHeader = new TableRow(DisplayActivity.this);
-                    statsHeader.setGravity(Gravity.CENTER);
-
-                    for(int i = 0; i < COLUMN_NAMES.length; i++){
-                        TextView header = createColumn(COLUMN_NAMES[i], 20, Color.BLACK);
-                        header.setGravity(Gravity.CENTER);
-
-                        if(i != COLUMN_NAMES.length - 1)
-                            header.setPadding(0, 0, 10, 0);
-
-                        statsHeader.addView(header);
-                    }
-
-                    table.addView(statsHeader);
-
-                    //Get data from JSON response and put into table
-                    for(HashMap<String, String> yearResult: statsList){
-                        TableRow statsRow = new TableRow(DisplayActivity.this);
-                        statsRow.setGravity(Gravity.CENTER);
-
-                        for(int i = 0; i < COLUMN_TAGS.length; i++){
-                            TextView stat = createColumn(yearResult.get(COLUMN_TAGS[i]), 20, Color.BLACK);
-
-                            if(i != COLUMN_TAGS.length - 1)
-                                stat.setPadding(0, 0, 10, 0);
-
-                            statsRow.addView(stat);
-                        }
-
-                        table.addView(statsRow);
-                    }
+                    addTableRows(table, new String[]{inputFName, inputLName}, null);
+                    addTableRows(table, COLUMN_NAMES, COLUMN_TAGS);
+                    addTableRows(table, BATTING_NAMES, BATTING_TAGS);
 
                     setContentView(table);
                 }
@@ -213,6 +175,59 @@ public class DisplayActivity extends Activity {
         }
 
     }
+
+    /**
+     * This will add Batting statistics to an already existing table layout
+     * @param table to add statistics to
+     * @param columnNames
+     * @param columnTags from the JSON, may be null if all you want to display are the names
+     */
+
+    public void addTableRows(TableLayout table, String[] columnNames, String[] columnTags){
+        //Set up table header
+        TableRow header = new TableRow(DisplayActivity.this);
+        header.setGravity(Gravity.CENTER);
+
+        for(int i = 0; i < columnNames.length; i++){
+            TextView headerText = createColumn(columnNames[i], 20, Color.BLACK);
+            headerText.setGravity(Gravity.CENTER);
+
+            if(i != columnNames.length - 1)
+                headerText.setPadding(0, 0, 10, 0);
+
+            header.addView(headerText);
+        }
+
+        table.addView(header);
+
+        //Just in case all we want to do is make a header, no need to do the following check
+        if(columnTags != null){
+            //Get data from JSON response and put into table
+            for(HashMap<String, String> yearResult: statsList){
+                TableRow row = new TableRow(DisplayActivity.this);
+                row.setGravity(Gravity.CENTER);
+
+                for(int i = 0; i < columnTags.length; i++){
+                    TextView rowText = createColumn(yearResult.get(columnTags[i]), 20, Color.BLACK);
+
+                    if(i != columnTags.length - 1)
+                        rowText.setPadding(0, 0, 10, 0);
+
+                    row.addView(rowText);
+                }
+
+                table.addView(row);
+            }
+        }
+    }
+
+    /**
+     * A helper method to create a column in a table
+     * @param text
+     * @param size
+     * @param color
+     * @return the column created
+     */
 
     public TextView createColumn(String text, int size, int color){
         TextView view = new TextView(DisplayActivity.this);
