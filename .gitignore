@@ -27,3 +27,6 @@ DBInfo.txt
 #Gradle stuff
 .gradle
 .idea
+
+#R stuff
+R$*.class

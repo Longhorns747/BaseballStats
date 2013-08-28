@@ -28,13 +28,30 @@
             android:hint="Player Name"
             android:width="200dp"/>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp">
+
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/query"
-            android:id="@+id/query_button"
+            android:text="@string/Batting"
+            android:id="@+id/hitting_query"
             android:onClick="startQuery"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Pitching"
+        android:id="@+id/pitching_query"
+        android:onClick="startQuery"/>
+
+    </LinearLayout>
 
 </LinearLayout>
 

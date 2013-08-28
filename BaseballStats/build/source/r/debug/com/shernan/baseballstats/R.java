@@ -23,9 +23,10 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080003;
+        public static final int action_settings=0x7f080004;
+        public static final int hitting_query=0x7f080002;
+        public static final int pitching_query=0x7f080003;
         public static final int query=0x7f080001;
-        public static final int query_button=0x7f080002;
         public static final int textView=0x7f080000;
     }
     public static final class layout {
@@ -39,10 +40,12 @@ public final class R {
     public static final class string {
         /**  From: file:/home/ethan/Desktop/Other%20Projects/BaseballStats/BaseballStats/src/main/res/values/strings.xml 
          */
-        public static final int action_settings=0x7f050000;
-        public static final int app_name=0x7f050001;
-        public static final int query=0x7f050002;
-        public static final int title_activity_query=0x7f050003;
+        public static final int Batting=0x7f050000;
+        public static final int Pitching=0x7f050001;
+        public static final int action_settings=0x7f050002;
+        public static final int app_name=0x7f050003;
+        public static final int query=0x7f050004;
+        public static final int title_activity_query=0x7f050005;
     }
     public static final class style {
         /**  From: file:/home/ethan/Desktop/Other%20Projects/BaseballStats/BaseballStats/src/main/res/values/styles.xml 

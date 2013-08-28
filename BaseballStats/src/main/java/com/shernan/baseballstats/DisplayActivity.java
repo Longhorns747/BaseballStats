@@ -38,14 +38,9 @@ public class DisplayActivity extends Activity {
     ArrayList<HashMap<String, String>> statsList;
 
     // JSON Node names
-    private static final String TAG_SUCCESS = "success";
-    private static final String TAG_STATS = "stats";
-    private static final String TAG_YEAR = "yearID";
-    private static final String TAG_TEAM = "teamID";
-    private static final String TAG_AVG = "AVG";
-    private static final String TAG_OBP = "OBP";
-    private static final String TAG_SLG = "SLG";
-    private static final String TAG_OPS = "OPS";
+    private static final String TAG_SUCCESS = "success", TAG_STATS = "stats", TAG_YEAR = "yearID", TAG_TEAM = "teamID";
+    private static final String TAG_AVG = "AVG", TAG_OBP = "OBP", TAG_SLG = "SLG", TAG_OPS = "OPS";
+    private static final String TAG_WINS = "W", TAG_LOSSES = "L", TAG_ERA = "ERA", TAG_ER = "ER", TAG_IP = "IP";
 
     //Column information arrays shared between Batting/Pitching
     private static final String[] COLUMN_TAGS = {TAG_YEAR, TAG_TEAM};
@@ -53,11 +48,16 @@ public class DisplayActivity extends Activity {
 
     //Batting specific tags
     private static final String[] BATTING_TAGS = {TAG_AVG, TAG_OBP, TAG_SLG, TAG_OPS};
-    private static final String[] BATTING_NAMES = {"AVG", "OBP", "SLG", "OPS"};
+
+    //Pitching specific tags
+    private static final String[] PITCHING_TAGS = {TAG_WINS, TAG_LOSSES, TAG_ER, TAG_IP, TAG_ERA};
 
     //Player name from the input screen
     String inputFName;
     String inputLName;
+
+    //Type of statistic
+    String statType;
 
     // stats JSONArray
     JSONArray stats = null;
@@ -71,6 +71,7 @@ public class DisplayActivity extends Activity {
         Intent queryIntent = getIntent();
         inputFName = queryIntent.getStringExtra(QueryActivity.PLAYER_FIRST_NAME);
         inputLName = queryIntent.getStringExtra(QueryActivity.PLAYER_LAST_NAME);
+        statType = queryIntent.getStringExtra(QueryActivity.STAT_TYPE);
 
         statsList = new ArrayList<HashMap<String, String>>();
 
@@ -110,6 +111,7 @@ public class DisplayActivity extends Activity {
 
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("statType", statType));
             params.add(new BasicNameValuePair("firstName", inputFName));
             params.add(new BasicNameValuePair("lastName", inputLName));
 
@@ -138,8 +140,14 @@ public class DisplayActivity extends Activity {
                             mapStats.put(tag, jsonStats.getString(tag));
                         }
 
-                        for(String tag: BATTING_TAGS){
-                            mapStats.put(tag, jsonStats.getString(tag));
+                        if(statType.equals("Batting")){
+                            for(String tag: BATTING_TAGS){
+                                mapStats.put(tag, jsonStats.getString(tag));
+                            }
+                        } else if(statType.equals("Pitching")){
+                            for(String tag: PITCHING_TAGS){
+                                mapStats.put(tag, jsonStats.getString(tag));
+                            }
                         }
 
                         // adding HashList to ArrayList
@@ -169,7 +177,11 @@ public class DisplayActivity extends Activity {
                     table.setBackgroundResource(getResources().getIdentifier("blank" , "drawable", getPackageName()));
 
                     addTableRows(table, new String[]{inputFName, inputLName}, null);
-                    addTableRows(table, merge(COLUMN_NAMES, BATTING_NAMES), merge(COLUMN_TAGS, BATTING_TAGS));
+
+                    if(statType.equals("Batting"))
+                        addTableRows(table, merge(COLUMN_NAMES, BATTING_TAGS), merge(COLUMN_TAGS, BATTING_TAGS));
+                    else if(statType.equals("Pitching"))
+                        addTableRows(table, merge(COLUMN_NAMES, PITCHING_TAGS), merge(COLUMN_TAGS, PITCHING_TAGS));
 
                     setContentView(table);
                 }
