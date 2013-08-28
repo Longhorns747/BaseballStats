@@ -134,6 +134,10 @@ public class DisplayActivity extends Activity {
                         HashMap<String, String> mapStats = new HashMap<String, String>();
 
                         // Storing each json item in variable
+                        for(String tag: COLUMN_TAGS){
+                            mapStats.put(tag, jsonStats.getString(tag));
+                        }
+
                         for(String tag: BATTING_TAGS){
                             mapStats.put(tag, jsonStats.getString(tag));
                         }
@@ -165,8 +169,7 @@ public class DisplayActivity extends Activity {
                     table.setBackgroundResource(getResources().getIdentifier("blank" , "drawable", getPackageName()));
 
                     addTableRows(table, new String[]{inputFName, inputLName}, null);
-                    addTableRows(table, COLUMN_NAMES, COLUMN_TAGS);
-                    addTableRows(table, BATTING_NAMES, BATTING_TAGS);
+                    addTableRows(table, merge(COLUMN_NAMES, BATTING_NAMES), merge(COLUMN_TAGS, BATTING_TAGS));
 
                     setContentView(table);
                 }
@@ -177,7 +180,7 @@ public class DisplayActivity extends Activity {
     }
 
     /**
-     * This will add Batting statistics to an already existing table layout
+     * This will add statistics to an already existing table layout
      * @param table to add statistics to
      * @param columnNames
      * @param columnTags from the JSON, may be null if all you want to display are the names
@@ -193,7 +196,7 @@ public class DisplayActivity extends Activity {
             headerText.setGravity(Gravity.CENTER);
 
             if(i != columnNames.length - 1)
-                headerText.setPadding(0, 0, 10, 0);
+                headerText.setPadding(0, 0, 5, 0);
 
             header.addView(headerText);
         }
@@ -211,7 +214,7 @@ public class DisplayActivity extends Activity {
                     TextView rowText = createColumn(yearResult.get(columnTags[i]), 20, Color.BLACK);
 
                     if(i != columnTags.length - 1)
-                        rowText.setPadding(0, 0, 10, 0);
+                        rowText.setPadding(0, 0, 5, 0);
 
                     row.addView(rowText);
                 }
@@ -235,6 +238,26 @@ public class DisplayActivity extends Activity {
         view.setTextSize(size);
         view.setTextColor(color);
         return view;
+    }
+
+    /**
+     * A helper to merge various arrays together as needed for the column tags/names
+     * @return the merged array
+     */
+
+    public String[] merge(String[] arr1, String[] arr2){
+        String[] merged = new String[arr1.length + arr2.length];
+
+        for(int i = 0; i < merged.length; i++){
+            if(i < arr1.length){
+                merged[i] = arr1[i];
+            }
+            else{
+                merged[i] = arr2[i - arr1.length];
+            }
+        }
+
+        return merged;
     }
     
 }
