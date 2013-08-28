@@ -1,19 +1,19 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1375561520000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/menu/display.xml
-1375561520000 324 aa1f5f1723de9aee2669dc44a26fbc0ce776d35f /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values-v11/styles.xml
-1373557695000 14383 82acdd75e3fcc36026109406625edc69d4d7212d /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-xhdpi/ic_launcher.png
-1375568272000 4506 bc86e1b8368c9b5d572678a8638ed80629e749ba /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-hdpi/blank.jpg
-1375561521000 181 84de2797380184d8b39af6f829afb092fb956173 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values-sw600dp/dimens.xml
-1375567976000 19344 723aff25a52a7f54867dba84bb55e5bfa2b39ed0 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-hdpi/background.jpg
-1375568171000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/menu/query.xml
-1375561521000 254 25b6404e44acb50c82590049639d4fb5fefbac8e /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values-sw720dp-land/dimens.xml
-1377187706000 552 baca26696a1d58619533d66eaf8e06dfdcbb6752 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/layout/activity_display.xml
-1375561520000 381 b129b276e01126de5b3b753572ac67cbfc19454c /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values-v14/styles.xml
-1375561520000 680 c76f4caaa7a8dfe9727fa93001b3aee3b22d6716 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values/styles.xml
-1375561520000 211 4e1904afba59d31e5cd6133f6a4c360fa9a5913f /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values/dimens.xml
-1377621210000 1689 0536f6f356093f4d8997347dd1c17c526b03c46b /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/layout/activity_query.xml
-1373557695000 9397 4a5a9affbb731f195fc18fea78d51be7db7536a2 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-hdpi/ic_launcher.png
-1373557695000 5237 7761bceaf18ed25cdba5f34bf00a55616d078acf /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-mdpi/ic_launcher.png
-1375570637000 275 d726cabaa75a71abcee98014338e98bfe64e1beb /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values/strings.xml
+1377621991000 14383 82acdd75e3fcc36026109406625edc69d4d7212d /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-xhdpi/ic_launcher.png
+1377621991000 9397 4a5a9affbb731f195fc18fea78d51be7db7536a2 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/ic_launcher.png
+1377718763000 1641 47952771e76c77d352e0538af488659f2ce03935 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/layout/activity_query.xml
+1377621991000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/menu/query.xml
+1377621991000 680 c76f4caaa7a8dfe9727fa93001b3aee3b22d6716 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values/styles.xml
+1377621991000 211 4e1904afba59d31e5cd6133f6a4c360fa9a5913f /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values/dimens.xml
+1377621991000 19344 723aff25a52a7f54867dba84bb55e5bfa2b39ed0 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/background.jpg
+1377621991000 181 84de2797380184d8b39af6f829afb092fb956173 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values-sw600dp/dimens.xml
+1377621991000 5237 7761bceaf18ed25cdba5f34bf00a55616d078acf /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-mdpi/ic_launcher.png
+1377621991000 381 b129b276e01126de5b3b753572ac67cbfc19454c /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values-v14/styles.xml
+1377621991000 254 25b6404e44acb50c82590049639d4fb5fefbac8e /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values-sw720dp-land/dimens.xml
+1377621991000 324 aa1f5f1723de9aee2669dc44a26fbc0ce776d35f /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values-v11/styles.xml
+1377718015000 4506 bc86e1b8368c9b5d572678a8638ed80629e749ba /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/blank.jpg
+1377718758000 552 baca26696a1d58619533d66eaf8e06dfdcbb6752 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/layout/activity_display.xml
+1377621991000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/menu/display.xml
+1377621991000 275 d726cabaa75a71abcee98014338e98bfe64e1beb /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values/strings.xml

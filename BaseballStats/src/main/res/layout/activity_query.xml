@@ -2,7 +2,6 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:screenOrientation="portrait"
                 android:orientation="vertical"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
@@ -26,7 +25,7 @@
             android:layout_gravity="center"
             android:id="@+id/query"
             android:inputType="text"
-            android:hint="Player"
+            android:hint="Player Name"
             android:width="200dp"/>
 
     <Button
