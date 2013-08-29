@@ -224,6 +224,7 @@ public class DisplayActivity extends Activity {
 
                 for(int i = 0; i < columnTags.length; i++){
                     TextView rowText = createColumn(yearResult.get(columnTags[i]), 20, Color.BLACK);
+                    rowText.setBackgroundResource(R.drawable.cell_shape);
 
                     if(i != columnTags.length - 1)
                         rowText.setPadding(0, 0, 5, 0);
