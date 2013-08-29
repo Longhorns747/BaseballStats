@@ -13,6 +13,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -89,7 +90,7 @@ public class DisplayActivity extends Activity {
     /**
      * Background Async Task to Load all stats by making HTTP Request
      * */
-    class LoadStats extends AsyncTask<String, String, String> {
+    private class LoadStats extends AsyncTask<String, String, String> {
 
         /**
          * Before starting background thread Show Progress Dialog
@@ -154,6 +155,18 @@ public class DisplayActivity extends Activity {
                         statsList.add(mapStats);
                     }
                 }
+                /*else {
+                    pDialog.dismiss();
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(new DisplayActivity());
+                    builder.setMessage("No data found for this player!");
+
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+
+                    Intent i = new Intent(DisplayActivity.this, QueryActivity.class);
+                    startActivity(i);
+                }*/
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -164,7 +177,7 @@ public class DisplayActivity extends Activity {
         /**
          * After completing background task Dismiss the progress dialog
          * **/
-        protected void onPostExecute(String file_url) {
+        protected void onPostExecute() {
             // dismiss the dialog after getting all products
             pDialog.dismiss();
             // updating UI from Background Thread

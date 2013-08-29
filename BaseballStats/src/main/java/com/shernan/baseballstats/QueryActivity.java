@@ -1,5 +1,6 @@
 package com.shernan.baseballstats;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
@@ -37,13 +38,22 @@ public class QueryActivity extends Activity {
 
         String[] playerName = nameText.split(" ");
 
-        //Prepare Data for Activity Transfer
-        i.putExtra(PLAYER_FIRST_NAME, playerName[0]);
-        i.putExtra(PLAYER_LAST_NAME, playerName[1]);
-        i.putExtra(STAT_TYPE, statType);
+        if(playerName.length != 2){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Please enter a first name and a last name");
 
-        //Switch activities
-        startActivity(i);
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+        else {
+            //Prepare Data for Activity Transfer
+            i.putExtra(PLAYER_FIRST_NAME, playerName[0]);
+            i.putExtra(PLAYER_LAST_NAME, playerName[1]);
+            i.putExtra(STAT_TYPE, statType);
+
+            //Switch activities
+            startActivity(i);
+        }
     }
     
 }
