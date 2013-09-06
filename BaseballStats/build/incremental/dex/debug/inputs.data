@@ -1,19 +1,19 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1377718210000 482 3bdfb98eb627a3827e465729f97926c8085cd764 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$dimen.class
-1377736933000 747 5403077f6ef2cbb2261679d7b2df874e01977d9b /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R.class
-1377736933000 594 4349964492c00b7bcf3c935d880e2f4c5e59995e /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$string.class
-1377720974000 2069 9ab8eef897b2b2ed40468bd4a549f279afe37955 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/QueryActivity.class
-1377737573000 5718 ccdae3bac75a66ed8e0b61de135c648be3cb2abb /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/DisplayActivity.class
-1377736933000 550 7ed9997d24a118be863925227113563c96e8be4d /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$id.class
-1377736933000 452 d19d61caeebaf20551e55b1abaab7f3d99b7ffc2 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$style.class
-1377722362000 2113 a97e22542557d44ac23930a1000644790692d159 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/DisplayActivity$LoadStats$1.class
-1377736933000 525 369c24b6e21fcf49d1447458c9ceca4b32a77dda /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$drawable.class
-1377736933000 465 17b4a695d132f6293fd8186b61bc35a7073366e1 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$layout.class
-1377718210000 3541 bdb7498b219cfc25084280b709bc3134aeb90260 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/utils/JSONParser.class
-1377718210000 361 98eb208e5cfa8f62b67d9c7d2a89fc7d9826d0a2 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$attr.class
-1377718210000 359 8756bd9be1ec853e80e5cedab475daa3d0cdbebb /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/BuildConfig.class
+1378476446000 5718 ccdae3bac75a66ed8e0b61de135c648be3cb2abb /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/DisplayActivity.class
+1378476446000 482 3bdfb98eb627a3827e465729f97926c8085cd764 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$dimen.class
+1378476446000 441 6f20d83f89788b4155cc24d313e4e575cce6e412 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$menu.class
+1378476446000 452 d19d61caeebaf20551e55b1abaab7f3d99b7ffc2 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$style.class
+1378476446000 4702 7542d3c2d9fafba1875183cbded88bc219b7d4cb /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/DisplayActivity$LoadStats.class
+1378476446000 2069 9ab8eef897b2b2ed40468bd4a549f279afe37955 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/QueryActivity.class
+1378476446000 2113 a97e22542557d44ac23930a1000644790692d159 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/DisplayActivity$LoadStats$1.class
+1378476446000 465 17b4a695d132f6293fd8186b61bc35a7073366e1 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$layout.class
+1378476446000 359 8756bd9be1ec853e80e5cedab475daa3d0cdbebb /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/BuildConfig.class
+1378476446000 525 369c24b6e21fcf49d1447458c9ceca4b32a77dda /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$drawable.class
+1378476446000 594 4349964492c00b7bcf3c935d880e2f4c5e59995e /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$string.class
 1369432937000 490914 3fe75433da602500cc71fcc1c46e5550291dd45d /home/ethan/android-studio/sdk/extras/android/m2repository/com/android/support/support-v4/13.0.0/support-v4-13.0.0.jar
-1377736933000 441 6f20d83f89788b4155cc24d313e4e575cce6e412 /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$menu.class
-1377722362000 4702 7542d3c2d9fafba1875183cbded88bc219b7d4cb /home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/classes/debug/com/shernan/baseballstats/DisplayActivity$LoadStats.class
+1378476446000 550 7ed9997d24a118be863925227113563c96e8be4d /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$id.class
+1378476446000 3541 bdb7498b219cfc25084280b709bc3134aeb90260 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/utils/JSONParser.class
+1378476446000 361 98eb208e5cfa8f62b67d9c7d2a89fc7d9826d0a2 /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R$attr.class
+1378476446000 747 5403077f6ef2cbb2261679d7b2df874e01977d9b /home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/classes/debug/com/shernan/baseballstats/R.class
