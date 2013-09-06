@@ -11,8 +11,8 @@ public final class R {
     public static final class attr {
     }
     public static final class dimen {
-        /**  From: file:/home/ethan/Desktop/Other%20Projects/BaseballStats/BaseballStats/src/main/res/values/dimens.xml 
- From: file:/home/ethan/Desktop/Other%20Projects/BaseballStats/BaseballStats/src/main/res/values-sw720dp-land/dimens.xml 
+        /**  From: file:/home/ethan/Dropbox/My%20Stuff/Android%20Dev/BaseballStatsProject/BaseballStats/src/main/res/values/dimens.xml 
+ From: file:/home/ethan/Dropbox/My%20Stuff/Android%20Dev/BaseballStatsProject/BaseballStats/src/main/res/values-sw720dp-land/dimens.xml 
          */
         public static final int activity_horizontal_margin=0x7f040000;
         public static final int activity_vertical_margin=0x7f040001;
@@ -38,7 +38,7 @@ public final class R {
         public static final int query=0x7f070001;
     }
     public static final class string {
-        /**  From: file:/home/ethan/Desktop/Other%20Projects/BaseballStats/BaseballStats/src/main/res/values/strings.xml 
+        /**  From: file:/home/ethan/Dropbox/My%20Stuff/Android%20Dev/BaseballStatsProject/BaseballStats/src/main/res/values/strings.xml 
          */
         public static final int Batting=0x7f050000;
         public static final int Pitching=0x7f050001;
@@ -48,15 +48,15 @@ public final class R {
         public static final int title_activity_query=0x7f050005;
     }
     public static final class style {
-        /**  From: file:/home/ethan/Desktop/Other%20Projects/BaseballStats/BaseballStats/src/main/res/values/styles.xml 
+        /**  From: file:/home/ethan/Dropbox/My%20Stuff/Android%20Dev/BaseballStatsProject/BaseballStats/src/main/res/values/styles.xml 
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         
- From: file:/home/ethan/Desktop/Other%20Projects/BaseballStats/BaseballStats/src/main/res/values-v11/styles.xml 
+ From: file:/home/ethan/Dropbox/My%20Stuff/Android%20Dev/BaseballStatsProject/BaseballStats/src/main/res/values-v11/styles.xml 
  API 11 theme customizations can go here. 
- From: file:/home/ethan/Desktop/Other%20Projects/BaseballStats/BaseballStats/src/main/res/values-v14/styles.xml 
+ From: file:/home/ethan/Dropbox/My%20Stuff/Android%20Dev/BaseballStatsProject/BaseballStats/src/main/res/values-v14/styles.xml 
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f060000;
