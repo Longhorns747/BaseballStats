@@ -14,6 +14,7 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -21,6 +22,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -61,6 +64,8 @@ public class DisplayActivity extends Activity {
 
     // stats JSONArray
     JSONArray stats = null;
+
+    private final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,9 +166,6 @@ public class DisplayActivity extends Activity {
             return null;
         }
 
-        /**
-         * After completing background task Dismiss the progress dialog
-         * **/
         protected void onPostExecute(String file_url) {
             // dismiss the dialog after getting all products
             pDialog.dismiss();
@@ -182,6 +184,22 @@ public class DisplayActivity extends Activity {
                         addTableRows(table, merge(COLUMN_NAMES, BATTING_TAGS), merge(COLUMN_TAGS, BATTING_TAGS));
                     else if(statType.equals("Pitching"))
                         addTableRows(table, merge(COLUMN_NAMES, PITCHING_TAGS), merge(COLUMN_TAGS, PITCHING_TAGS));
+
+                    Button graphButton = new Button(table.getContext());
+                    graphButton.setText("Graph!");
+
+                    graphButton.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                            Intent i = new Intent(context, GraphActivity.class);
+
+                            //Switch activities
+                            startActivity(i);
+                        }
+                    });
+
+                    graphButton.setGravity(Gravity.CENTER);
+
+                    table.addView(graphButton);
 
                     setContentView(table);
                 }
@@ -215,7 +233,7 @@ public class DisplayActivity extends Activity {
 
         table.addView(header);
 
-        //Just in case all we want to do is make a header, no need to do the following check
+        //Just in case all we want to do is make a header, no need to do the following
         if(columnTags != null){
             //Get data from JSON response and put into table
             for(HashMap<String, String> yearResult: statsList){

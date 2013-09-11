@@ -13,6 +13,8 @@
             </intent-filter>
         </activity>
         android:debuggable="true"
+        <activity android:label="@string/title_activity_graph" android:name="com.shernan.baseballstats.GraphActivity" android:screenOrientation="landscape">
+        </activity>
     </application>
 
     <!-- Internet Permissions -->
