@@ -193,18 +193,16 @@ public class DisplayActivity extends Activity {
 
                     graphButton.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            ArrayList<String> years = new ArrayList<String>();
-                            ArrayList<String> passingStats = new ArrayList<String>();
-
                             StringBuffer sb = new StringBuffer();
                             sb.append("['Year', 'AVG'],\n");
 
-                            for(int i = 0; i < statsList.size(); i++){
+                            //Building our data array, go from oldest year to newest
+                            for(int i = statsList.size() - 1; i > -1; i--){
                                 HashMap<String, String> yearStats = statsList.get(i);
 
-                                sb.append("[" + yearStats.get(TAG_YEAR) + ", " + yearStats.get(TAG_AVG) + "]");
+                                sb.append("['" + yearStats.get(TAG_YEAR) + "', " + yearStats.get(TAG_AVG) + "]");
 
-                                if(i < statsList.size() - 1){
+                                if(i > 0){
                                     sb.append(", ");
                                 }
                             }
