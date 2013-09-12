@@ -30,6 +30,9 @@ import android.widget.TextView;
 
 public class DisplayActivity extends Activity {
 
+    //Javascript to pass along to the graph
+    public static final String GRAPH_STATS = "com.shernan.GRAPH_STATS";
+
     // Progress Dialog
     private ProgressDialog pDialog;
 
@@ -190,7 +193,25 @@ public class DisplayActivity extends Activity {
 
                     graphButton.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
+                            ArrayList<String> years = new ArrayList<String>();
+                            ArrayList<String> passingStats = new ArrayList<String>();
+
+                            StringBuffer sb = new StringBuffer();
+                            sb.append("['Year', 'AVG'],\n");
+
+                            for(int i = 0; i < statsList.size(); i++){
+                                HashMap<String, String> yearStats = statsList.get(i);
+
+                                sb.append("[" + yearStats.get(TAG_YEAR) + ", " + yearStats.get(TAG_AVG) + "]");
+
+                                if(i < statsList.size() - 1){
+                                    sb.append(", ");
+                                }
+                            }
+
                             Intent i = new Intent(context, GraphActivity.class);
+
+                            i.putExtra(GRAPH_STATS, sb.toString());
 
                             //Switch activities
                             startActivity(i);
