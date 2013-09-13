@@ -198,7 +198,9 @@ public class DisplayActivity extends Activity {
                         public void onClick(View v) {
                             Intent i = new Intent(context, GraphActivity.class);
 
-                            i.putExtra(GRAPH_STATS, formatChartData());
+                            String[] statTags = (statType.equals("Batting")) ? BATTING_GRAPH : PITCHING_GRAPH;
+
+                            i.putExtra(GRAPH_STATS, formatChartData(statTags));
                             i.putExtra(STAT_TYPE, statType);
 
                             //Switch activities
@@ -305,15 +307,13 @@ public class DisplayActivity extends Activity {
      * @return formatted data
      */
 
-    public String formatChartData(){
+    public String formatChartData(String[] statTags){
         StringBuffer sb = new StringBuffer();
         sb.append("['Year'");
 
-        String[] statHeaders = (statType.equals("Batting")) ? BATTING_GRAPH : PITCHING_GRAPH;
-
         //Add the stat headers
-        for(int i = 0; i < statHeaders.length; i++){
-            sb.append(", '" + statHeaders[i] + "'");
+        for(int i = 0; i < statTags.length; i++){
+            sb.append(", '" + statTags[i] + "'");
         }
 
         sb.append("],");
@@ -324,7 +324,7 @@ public class DisplayActivity extends Activity {
 
             sb.append("['" + yearStats.get(TAG_YEAR) + "'");
 
-            for(String header: statHeaders){
+            for(String header: statTags){
                 sb.append(", " + yearStats.get(header));
             }
 
