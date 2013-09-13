@@ -45,7 +45,7 @@ public class DisplayActivity extends Activity {
 
     // JSON Node names
     private static final String TAG_SUCCESS = "success", TAG_STATS = "stats", TAG_YEAR = "yearID", TAG_TEAM = "teamID";
-    private static final String TAG_AVG = "AVG", TAG_OBP = "OBP", TAG_SLG = "SLG", TAG_OPS = "OPS";
+    private static final String TAG_AVG = "AVG", TAG_HR = "HR", TAG_OBP = "OBP", TAG_SLG = "SLG", TAG_OPS = "OPS";
     private static final String TAG_WINS = "W", TAG_LOSSES = "L", TAG_ERA = "ERA", TAG_ER = "ER", TAG_IP = "IP";
 
     //Column information arrays shared between Batting/Pitching
@@ -53,10 +53,12 @@ public class DisplayActivity extends Activity {
     private static final String[] COLUMN_NAMES = {"Year", "Team"};
 
     //Batting specific tags
-    private static final String[] BATTING_TAGS = {TAG_AVG, TAG_OBP, TAG_SLG, TAG_OPS};
+    private static final String[] BATTING_TAGS = {TAG_AVG, TAG_HR, TAG_OBP, TAG_SLG, TAG_OPS};
+    private static final String[] BATTING_GRAPH = {TAG_AVG};
 
     //Pitching specific tags
     private static final String[] PITCHING_TAGS = {TAG_WINS, TAG_LOSSES, TAG_ER, TAG_IP, TAG_ERA};
+    private static final String[] PITCHING_GRAPH = {TAG_ERA};
 
     //Player name from the input screen
     String inputFName;
@@ -193,23 +195,9 @@ public class DisplayActivity extends Activity {
 
                     graphButton.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            StringBuffer sb = new StringBuffer();
-                            sb.append("['Year', 'AVG'],\n");
-
-                            //Building our data array, go from oldest year to newest
-                            for(int i = statsList.size() - 1; i > -1; i--){
-                                HashMap<String, String> yearStats = statsList.get(i);
-
-                                sb.append("['" + yearStats.get(TAG_YEAR) + "', " + yearStats.get(TAG_AVG) + "]");
-
-                                if(i > 0){
-                                    sb.append(", ");
-                                }
-                            }
-
                             Intent i = new Intent(context, GraphActivity.class);
 
-                            i.putExtra(GRAPH_STATS, sb.toString());
+                            i.putExtra(GRAPH_STATS, formatChartData());
 
                             //Switch activities
                             startActivity(i);
@@ -308,6 +296,44 @@ public class DisplayActivity extends Activity {
         }
 
         return merged;
+    }
+
+    /**
+     * A helper method to format the statistical data that will go into the Google Chart API call
+     * @return formatted data
+     */
+
+    public String formatChartData(){
+        StringBuffer sb = new StringBuffer();
+        sb.append("['Year'");
+
+        String[] statHeaders = (statType.equals("Batting")) ? BATTING_GRAPH : PITCHING_GRAPH;
+
+        //Add the stat headers
+        for(int i = 0; i < statHeaders.length; i++){
+            sb.append(", '" + statHeaders[i] + "'");
+        }
+
+        sb.append("],");
+
+        //Building our data array, go from oldest year to newest
+        for(int i = statsList.size() - 1; i > -1; i--){
+            HashMap<String, String> yearStats = statsList.get(i);
+
+            sb.append("['" + yearStats.get(TAG_YEAR) + "'");
+
+            for(String header: statHeaders){
+                sb.append(", " + yearStats.get(header));
+            }
+
+            sb.append("]");
+
+            if(i > 0){
+                sb.append(", ");
+            }
+        }
+
+        return sb.toString();
     }
     
 }

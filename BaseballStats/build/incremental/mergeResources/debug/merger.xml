@@ -2,86 +2,29 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res" >
+        <source path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res" >
             <file
-                name="display"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/menu/display.xml"
+                name="activity_query"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/layout/activity_query.xml"
                 qualifiers=""
-                type="menu" />
+                type="layout" />
             <file
-                name="query"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/menu/query.xml"
+                name="activity_graph"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/layout/activity_graph.xml"
                 qualifiers=""
-                type="menu" />
+                type="layout" />
             <file
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values-v14/styles.xml"
-                qualifiers="v14" >
-
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Holo.Light.DarkActionBar" >
-
-                    <!-- API 14 theme customizations can go here. -->
-                </style>
-            </file>
+                name="activity_display"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/layout/activity_display.xml"
+                qualifiers=""
+                type="layout" />
             <file
                 name="ic_launcher"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-mdpi/ic_launcher.png"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-mdpi/ic_launcher.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
-                name="ic_launcher"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-hdpi/ic_launcher.png"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="blank"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-hdpi/blank.jpg"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="background"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-hdpi/background.jpg"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                name="cell_shape"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-hdpi/cell_shape.xml"
-                qualifiers="hdpi"
-                type="drawable" />
-            <file
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values-v11/styles.xml"
-                qualifiers="v11" >
-
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Holo.Light" >
-
-                    <!-- API 11 theme customizations can go here. -->
-                </style>
-            </file>
-            <file
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values/strings.xml"
-                qualifiers="" >
-                <string name="action_settings" >Settings
-                </string>
-                <string name="title_activity_graph" >GraphActivity
-                </string>
-                <string name="query" >Query!
-                </string>
-                <string name="app_name" >Baseball Stats
-                </string>
-                <string name="Pitching" >Pitching
-                </string>
-                <string name="Batting" >Batting
-                </string>
-                <string name="hello_world" >Hello world!
-                </string>
-                <string name="title_activity_query" >QueryActivity
-                </string>
-            </file>
-            <file
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values/styles.xml"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values/styles.xml"
                 qualifiers="" >
 
                 <style
@@ -103,7 +46,7 @@
                 </style>
             </file>
             <file
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values/dimens.xml"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -111,41 +54,98 @@
                 </dimen>
             </file>
             <file
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="action_settings" >Settings
+                </string>
+                <string name="title_activity_graph" >GraphActivity
+                </string>
+                <string name="query" >Query!
+                </string>
+                <string name="app_name" >Baseball Stats
+                </string>
+                <string name="Pitching" >Pitching
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="Batting" >Batting
+                </string>
+                <string name="title_activity_query" >QueryActivity
+                </string>
+            </file>
+            <file
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values-v14/styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values-v11/styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 11 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                name="display"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/menu/display.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="graph"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/menu/graph.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="query"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/menu/query.xml"
+                qualifiers=""
+                type="menu" />
+            <file
                 name="ic_launcher"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/drawable-xhdpi/ic_launcher.png"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-xhdpi/ic_launcher.png"
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/values-sw720dp-land/dimens.xml"
+                name="blank"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/blank.jpg"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="background"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/background.jpg"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="cell_shape"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/cell_shape.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values-sw720dp-land/dimens.xml"
                 qualifiers="sw720dp-land" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
-            <file
-                name="activity_display"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/layout/activity_display.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="activity_query"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/layout/activity_query.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="graph"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/menu/graph.xml"
-                qualifiers=""
-                type="menu" />
-            <file
-                name="activity_graph"
-                path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/main/res/layout/activity_graph.xml"
-                qualifiers=""
-                type="layout" />
         </source>
-        <source path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/build/res/rs/debug" />
+        <source path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/res/rs/debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/home/ethan/Dropbox/My Stuff/Android Dev/BaseballStatsProject/BaseballStats/src/debug/res" />
+        <source path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/debug/res" />
     </dataSet>
 
 </merger>

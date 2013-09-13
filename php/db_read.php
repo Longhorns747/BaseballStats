@@ -43,7 +43,7 @@ if (count(array_values($_GET)) > 0) {
 function findBattingStats($firstName, $lastName){
     // Make a request to the appropriate table
     $result = mysql_query("SELECT yearID, teamID, H, 2B, 3B, HR, AB, BB, IBB, HBP, SF, ROUND((H / AB), 3) AS AVG FROM (master NATURAL JOIN batting)
-        WHERE nameFirst = '$firstName' AND nameLast = '$lastName' ORDER BY yearID DESC LIMIT 15;");
+        WHERE nameFirst = '$firstName' AND nameLast = '$lastName' ORDER BY yearID DESC LIMIT 11;");
 
     if (!empty($result)) {
         // check for empty result
@@ -60,6 +60,7 @@ function findBattingStats($firstName, $lastName){
                 $year["teamID"] = trim($teamIDArray["teamIDBR"]);
 
                 $year["AVG"] = ltrim(number_format($row["AVG"], 3), '0');
+                $year["HR"] = ltrim($row["HR"]);
 
                 //Calculate on base percentage
                 $SINGLES = $row["H"] - ($row["2B"] + $row["3B"] + $row["HR"]);
@@ -94,7 +95,7 @@ function findBattingStats($firstName, $lastName){
 function findPitchingStats($firstName, $lastName){
     // Make a request to the appropriate table
     $result = mysql_query("SELECT yearID, teamID, W, L, ER, IPOuts FROM (master NATURAL JOIN pitching)
-        WHERE nameFirst = '$firstName' AND nameLast = '$lastName' ORDER BY yearID DESC LIMIT 15;");
+        WHERE nameFirst = '$firstName' AND nameLast = '$lastName' ORDER BY yearID DESC LIMIT 11;");
 
     if (!empty($result)) {
         // check for empty result

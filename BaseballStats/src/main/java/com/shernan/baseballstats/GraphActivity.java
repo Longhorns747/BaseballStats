@@ -23,6 +23,11 @@ public class GraphActivity extends Activity {
 
     }
 
+    /**
+     * Need to wait until the WebView has attached before we put the graph in
+     * @param hasFocus
+     */
+
     public void onWindowFocusChanged(boolean hasFocus) {
         if (hasFocus) {
             WebView webview = (WebView) findViewById(R.id.graphView);
@@ -39,9 +44,8 @@ public class GraphActivity extends Activity {
                     + "        ]);"
                     + "        var options = {"
                     + "          title: 'Stats!',"
-                    + "          width:" + webview.getWidth() + ","
-                    + "          height:" + webview.getHeight() + ","
-                    + "          hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}"
+                    + "          hAxis: {title: 'Year', titleTextStyle: {color: 'red'}},"
+                    + "          vAxis: {format: '.000'}"
                     + "        };"
                     + "        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));"
                     + "        chart.draw(data, options);"
@@ -49,7 +53,7 @@ public class GraphActivity extends Activity {
                     + "    </script>"
                     + "  </head>"
                     + "  <body>"
-                    + "    <div id=\"chart_div\" style=\"width:" + webview.getWidth() + "px; height: " + webview.getHeight() + "px;\"></div>"
+                    + "    <div id=\"chart_div\"></div>"
                     + "  </body>" + "</html>";
 
             WebSettings webSettings = webview.getSettings();
