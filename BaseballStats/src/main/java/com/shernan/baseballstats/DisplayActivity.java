@@ -32,6 +32,7 @@ public class DisplayActivity extends Activity {
 
     //Javascript to pass along to the graph
     public static final String GRAPH_STATS = "com.shernan.GRAPH_STATS";
+    public static final String STAT_TYPE = "com.shernan.STAT_TYPE";
 
     // Progress Dialog
     private ProgressDialog pDialog;
@@ -198,6 +199,7 @@ public class DisplayActivity extends Activity {
                             Intent i = new Intent(context, GraphActivity.class);
 
                             i.putExtra(GRAPH_STATS, formatChartData());
+                            i.putExtra(STAT_TYPE, statType);
 
                             //Switch activities
                             startActivity(i);

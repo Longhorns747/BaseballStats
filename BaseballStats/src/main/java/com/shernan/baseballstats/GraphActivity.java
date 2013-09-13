@@ -12,6 +12,7 @@ import android.webkit.WebView;
 public class GraphActivity extends Activity {
 
     private String graphStats;
+    private String vAxis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,7 @@ public class GraphActivity extends Activity {
 
         Intent statsIntent = getIntent();
         graphStats = statsIntent.getStringExtra(DisplayActivity.GRAPH_STATS);
-
+        vAxis = (statsIntent.getStringExtra(DisplayActivity.GRAPH_STATS).equals("Batting")) ? "vAxis: {format: '.000'}" : "vAxis: {format: '0.00'}";
     }
 
     /**
@@ -45,7 +46,7 @@ public class GraphActivity extends Activity {
                     + "        var options = {"
                     + "          title: 'Stats!',"
                     + "          hAxis: {title: 'Year', titleTextStyle: {color: 'red'}},"
-                    + "          vAxis: {format: '.000'}"
+                    +          vAxis
                     + "        };"
                     + "        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));"
                     + "        chart.draw(data, options);"
