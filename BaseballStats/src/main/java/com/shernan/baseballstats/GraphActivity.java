@@ -21,7 +21,7 @@ public class GraphActivity extends Activity {
 
         Intent statsIntent = getIntent();
         graphStats = statsIntent.getStringExtra(DisplayActivity.GRAPH_STATS);
-        vAxis = (statsIntent.getStringExtra(DisplayActivity.GRAPH_STATS).equals("Batting")) ? "vAxis: {format: '.000'}" : "vAxis: {format: '0.00'}";
+        vAxis = (statsIntent.getStringExtra(DisplayActivity.STAT_TYPE).equals("Batting")) ? "vAxis: {format: '.000'}" : "vAxis: {format: '0.00'}";
     }
 
     /**

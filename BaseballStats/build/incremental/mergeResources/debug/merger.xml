@@ -60,15 +60,15 @@
                 </string>
                 <string name="title_activity_graph" >GraphActivity
                 </string>
-                <string name="query" >Query!
-                </string>
                 <string name="app_name" >Baseball Stats
+                </string>
+                <string name="query" >Query!
                 </string>
                 <string name="Pitching" >Pitching
                 </string>
-                <string name="hello_world" >Hello world!
-                </string>
                 <string name="Batting" >Batting
+                </string>
+                <string name="hello_world" >Hello world!
                 </string>
                 <string name="title_activity_query" >QueryActivity
                 </string>
