@@ -60,15 +60,15 @@
                 </string>
                 <string name="title_activity_graph" >GraphActivity
                 </string>
-                <string name="app_name" >Baseball Stats
-                </string>
                 <string name="query" >Query!
+                </string>
+                <string name="app_name" >Baseball Stats
                 </string>
                 <string name="Pitching" >Pitching
                 </string>
-                <string name="Batting" >Batting
-                </string>
                 <string name="hello_world" >Hello world!
+                </string>
+                <string name="Batting" >Batting
                 </string>
                 <string name="title_activity_query" >QueryActivity
                 </string>
@@ -141,6 +141,11 @@
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
+            <file
+                name="baseballicon"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/baseballicon.gif"
+                qualifiers="hdpi"
+                type="drawable" />
         </source>
         <source path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/res/rs/debug" />
     </dataSet>
