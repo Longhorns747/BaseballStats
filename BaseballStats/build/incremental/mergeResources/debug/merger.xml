@@ -136,16 +136,16 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="baseballicon"
+                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/baseballicon.gif"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/values-sw720dp-land/dimens.xml"
                 qualifiers="sw720dp-land" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
-            <file
-                name="baseballicon"
-                path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/src/main/res/drawable-hdpi/baseballicon.gif"
-                qualifiers="hdpi"
-                type="drawable" />
         </source>
         <source path="/home/ethan/Desktop/Other Projects/BaseballStats/BaseballStats/build/res/rs/debug" />
     </dataSet>

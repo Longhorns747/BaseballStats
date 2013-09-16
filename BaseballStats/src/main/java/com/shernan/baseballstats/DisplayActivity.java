@@ -32,7 +32,7 @@ public class DisplayActivity extends Activity {
 
     //Javascript to pass along to the graph
     public static final String GRAPH_STATS = "com.shernan.GRAPH_STATS";
-    public static final String STAT_TYPE = "com.shernan.STAT_TYPE";
+    public static final String DATA_FORMAT = "com.shernan.DATA_FORMAT";
 
     // Progress Dialog
     private ProgressDialog pDialog;
@@ -194,14 +194,16 @@ public class DisplayActivity extends Activity {
                     Button graphButton = new Button(table.getContext());
                     graphButton.setText("Graph!");
 
+                    //Set up graph button
                     graphButton.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                             Intent i = new Intent(context, GraphActivity.class);
 
                             String[] statTags = (statType.equals("Batting")) ? BATTING_GRAPH : PITCHING_GRAPH;
+                            String formatter = (statType.equals("Batting")) ? ".000" : "0.00";
 
                             i.putExtra(GRAPH_STATS, formatChartData(statTags));
-                            i.putExtra(STAT_TYPE, statType);
+                            i.putExtra(DATA_FORMAT, formatter);
 
                             //Switch activities
                             startActivity(i);

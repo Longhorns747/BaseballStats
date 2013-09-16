@@ -1,7 +1,9 @@
 package com.shernan.baseballstats;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Point;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
@@ -12,7 +14,12 @@ import android.webkit.WebView;
 public class GraphActivity extends Activity {
 
     private String graphStats;
+    private String formatPattern;
     private String vAxis;
+
+    // Progress Dialog
+    private ProgressDialog pDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +28,7 @@ public class GraphActivity extends Activity {
 
         Intent statsIntent = getIntent();
         graphStats = statsIntent.getStringExtra(DisplayActivity.GRAPH_STATS);
-        vAxis = (statsIntent.getStringExtra(DisplayActivity.STAT_TYPE).equals("Batting")) ? "vAxis: {format: '.000'}" : "vAxis: {format: '0.00'}";
+        formatPattern = statsIntent.getStringExtra(DisplayActivity.DATA_FORMAT);
     }
 
     /**
@@ -46,9 +53,11 @@ public class GraphActivity extends Activity {
                     + "        var options = {"
                     + "          title: 'Stats!',"
                     + "          hAxis: {title: 'Year', titleTextStyle: {color: 'red'}},"
-                    +          vAxis
+                    + "          vAxis: {format: '" + formatPattern + "'}"
                     + "        };"
                     + "        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));"
+                    + "        var formatter = new google.visualization.NumberFormat({pattern:'" + formatPattern + "'});"
+                    + "        formatter.format(data, 1);"
                     + "        chart.draw(data, options);"
                     + "      }"
                     + "    </script>"
@@ -70,10 +79,6 @@ public class GraphActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.graph, menu);
         return true;
-    }
-
-    public String prepareData(){
-        return null;
     }
     
 }
