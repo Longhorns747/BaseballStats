@@ -17,9 +17,6 @@ public class GraphActivity extends Activity {
     private String formatPattern;
     private String vAxis;
 
-    // Progress Dialog
-    private ProgressDialog pDialog;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
